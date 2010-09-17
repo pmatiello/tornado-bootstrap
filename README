@@ -29,5 +29,5 @@ The server will fail the execute properly if:
 
 Database settings ------------------------------------------------------------------------
 
-The database URI and the object-relational mapping is configured at:
+The database URI and the object-relational mapping are configured at:
 	src/config/database.py
