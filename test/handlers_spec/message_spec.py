@@ -42,7 +42,5 @@ class message_handler_spec():
         verify(self.repository).save(self.message)
     
     def should_delete_messages(self):
-        when(self.handler).param('name').thenReturn("Author name updated")
-        when(self.handler).param('message').thenReturn("Message text updated")
         self.handler.delete(1)
         verify(self.repository).remove(self.message)
