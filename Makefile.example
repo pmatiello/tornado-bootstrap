@@ -1,0 +1,28 @@
+# tornado-blank-project
+
+PYTHON="/path/to/python"
+EASYINSTALL="/path/to/easy_install"
+NOSETESTS="/path/to/nosetests"
+
+PYTHONPATH="`pwd`/src"
+
+server:
+	export PYTHONPATH=${PYTHONPATH} && cd src && ${PYTHON} server.py
+
+test:
+	${NOSETESTS} -i should -i spec --verbose --nocapture
+
+database:
+	mkdir data
+	export PYTHONPATH=${PYTHONPATH} && cd src/config/ && ${PYTHON} schema.py
+
+deps:
+	${EASYINSTALL} tornado
+	${EASYINSTALL} sqlalchemy
+	${EASYINSTALL} nose
+	${EASYINSTALL} mockito
+
+clean:
+	find . -name *.pyc -exec rm {} \;
+
+.PHONY: server test database clean
