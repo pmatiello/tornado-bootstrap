@@ -1,3 +1,5 @@
+# Copyright (c) 2010 Pedro Matiello <pmatiello@gmail.com>
+
 from mockito import any, mock, verify, when
 from handlers.entity import entity_handler, entities_handler
 from models.entity import entity

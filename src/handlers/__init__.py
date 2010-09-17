@@ -1,3 +1,9 @@
+# Copyright (c) 2010 Pedro Matiello <pmatiello@gmail.com>
+
+"""
+A request handler with a few improvements.
+"""
+
 from tornado.web import RequestHandler
 
 class request_handler(RequestHandler):

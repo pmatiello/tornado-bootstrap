@@ -1,3 +1,9 @@
+# Copyright (c) 2010 Pedro Matiello <pmatiello@gmail.com>
+
+"""
+An example entity and its DAO.
+"""
+
 class entity(object):
     
     def __init__(self, field1, field2):

@@ -1,3 +1,9 @@
+# Copyright (c) 2010 Pedro Matiello <pmatiello@gmail.com>
+
+"""
+Database configuration and schema definition.
+"""
+
 from sqlalchemy import Table, Column, Integer, String, MetaData
 from sqlalchemy.orm import mapper
 from models.entity import entity

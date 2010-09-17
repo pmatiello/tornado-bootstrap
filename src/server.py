@@ -1,3 +1,9 @@
+# Copyright (c) 2010 Pedro Matiello <pmatiello@gmail.com>
+
+"""
+Application entry-point.
+"""
+
 import tornado.httpserver
 import tornado.ioloop
 import tornado.web

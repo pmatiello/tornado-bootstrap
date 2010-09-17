@@ -1,3 +1,5 @@
+# Copyright (c) 2010 Pedro Matiello <pmatiello@gmail.com>
+
 from mockito import any, mock, verify, when
 from models.entity import entity, entity_repository
 import config.database

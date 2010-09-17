@@ -1,3 +1,9 @@
+# Copyright (c) 2010 Pedro Matiello <pmatiello@gmail.com>
+
+"""
+Handlers.
+"""
+
 from models.entity import entity
 from handlers import request_handler
 
