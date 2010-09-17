@@ -1,0 +1,33 @@
+Tornado-Bootstrap
+------------------------------------------------------------------------------------------
+
+This is a small project for bootstrapping web applications using Tornado and SQLAlchemy.
+It comes with a very simple application illustrating handlers, entities and testing. This
+can be modified as necessary in order to build a proper application.
+
+Makefile usage ---------------------------------------------------------------------------
+
+The Makefile.example file is provided as stub for a proper Makefile. After copying it, the
+PYTHON, EASYINSTALL and NOSETESTS variables should be modified to point to the location of
+these variables in the current system.
+
+The following rules are implemented:
+
+server:		start the server
+
+test:		execute all tests
+
+database:	create the database
+
+deps:		install dependencies
+
+clean:		remove .pyc files
+
+The server will fail the execute properly if:
+	- there are non-installed dependencies,
+	- the database isn't present.
+
+Database settings ------------------------------------------------------------------------
+
+The database URI and the object-relational mapping is configured at:
+	src/config/database.py
