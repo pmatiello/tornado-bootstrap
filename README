@@ -9,7 +9,7 @@ Makefile usage -----------------------------------------------------------------
 
 The Makefile.example file is provided as stub for a proper Makefile. After copying it, the
 PYTHON, EASYINSTALL and NOSETESTS variables should be modified to point to the location of
-these variables in the current system.
+these variables in the current system or virtualenv.
 
 The following rules are implemented:
 
