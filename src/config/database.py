@@ -1,15 +1,15 @@
 from sqlalchemy import Table, Column, Integer, String, MetaData
 from sqlalchemy.orm import mapper
-from models.message import message
+from models.entity import entity
 
 database_uri = 'sqlite:///../data/database.sqlite'
 
 metadata = MetaData()
 
-messages_table = Table('Messages', metadata,
+entity_table = Table('Entity', metadata,
     Column('id', Integer, primary_key=True),
-    Column('name', String),
-    Column('message', String)
+    Column('field1', String),
+    Column('field2', String)
 )
 
-mapper(message, messages_table)
+mapper(entity, entity_table)

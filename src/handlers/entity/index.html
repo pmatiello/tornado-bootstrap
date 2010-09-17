@@ -6,17 +6,17 @@
 </head>
 <body>
 	<ul>
-	{% for message in messages %}
-		<li>{{message.id}}. {{message.message}} (por {{message.name}})</li>
+	{% for each in data %}
+		<li>{{each.id}}. {{each.field1}} / {{each.field2}}</li>
 	{% end %}
 	</ul>
 	
 	<form action="/" method="post">
-		<label for="name">Name: </label>
-		<input type="text" name="name" id="name" /><br />
+		<label for="field1">Field 1: </label>
+		<input type="text" name="field1" id="field1" /><br />
 		
-		<label for="message">Message: </label>
-		<input type="text" name="message" id="message" /><br />
+		<label for="field2">Field 2: </label>
+		<input type="text" name="field2" id="field2" /><br />
 		
 		<input type="submit" value="Send">		
 	</form>
