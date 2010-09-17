@@ -1,5 +1,6 @@
 from mockito import any, mock, verify, when
 from models.message import message, message_repository
+import config.database
 
 class message_repository_spec():
 
