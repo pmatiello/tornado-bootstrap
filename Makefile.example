@@ -9,6 +9,9 @@ PYTHONPATH="`pwd`/src"
 server:
 	export PYTHONPATH=${PYTHONPATH} && cd src && ${PYTHON} server.py
 
+console:
+	export PYTHONPATH=${PYTHONPATH} && cd src && ${PYTHON}
+
 test:
 	${NOSETESTS} -i should -i spec --verbose --nocapture
 
