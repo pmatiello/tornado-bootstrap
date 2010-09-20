@@ -17,7 +17,7 @@ class entities_handler_spec():
     def should_list_all_instances(self):
         self.handler.get()
         verify(self.repository).list()
-        verify(self.handler).render('index.html', data=self.entity_list)
+        verify(self.handler).render('entity/index.html', data=self.entity_list)
     
     def should_create_new_instances(self):
         when(self.handler).param('field1').thenReturn("Field1 data")

@@ -13,11 +13,11 @@ class entities_handler(request_handler):
         self.repository = repository
     
     def get(self):
-        self.render('index.html', data=self.repository.list())
+        self.render('entity/index.html', data=self.repository.list())
     
     def post(self):
         self.repository.save(entity(self.param('field1'), self.param('field2')))
-        self.render('index.html', data=self.repository.list())
+        self.render('entity/index.html', data=self.repository.list())
 
 class entity_handler(request_handler):
     
@@ -29,8 +29,8 @@ class entity_handler(request_handler):
         msg.field1 = self.param('field1')
         msg.field2 = self.param('field2')
         self.repository.save(msg)
-        self.render('index.html', data=self.repository.list())
+        self.render('entity/index.html', data=self.repository.list())
     
     def delete(self, id):
         self.repository.remove(self.repository.load(id))
-        self.render('index.html', data=self.repository.list())
+        self.render('entity/index.html', data=self.repository.list())
