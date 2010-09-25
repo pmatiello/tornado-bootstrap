@@ -1,8 +1,12 @@
 # tornado-blank-project
 
+# Configuration
+
 PYTHON="/path/to/python"
 EASYINSTALL="/path/to/easy_install"
 NOSETESTS="/path/to/nosetests"
+
+# Targets
 
 PYTHONPATH="`pwd`/src"
 
@@ -16,8 +20,8 @@ test:
 	${NOSETESTS} -i should -i spec --verbose --nocapture
 
 database:
-	mkdir data
-	export PYTHONPATH=${PYTHONPATH} && cd src/config/ && ${PYTHON} schema.py
+	mkdir -p data
+	export PYTHONPATH=${PYTHONPATH} && cd src/ && ${PYTHON} util/database.py
 
 deps:
 	${EASYINSTALL} tornado
@@ -28,4 +32,4 @@ deps:
 clean:
 	find . -name *.pyc -exec rm {} \;
 
-.PHONY: server test database clean
+.PHONY: server test database clean.PHONY: server test database clean
