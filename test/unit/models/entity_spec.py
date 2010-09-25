@@ -2,9 +2,11 @@
 
 from mockito import any, mock, verify, when
 from models.entity import entity, entity_repository
-import config.database
+from config.schema import map_entities
 
 class entity_repository_spec():
+    
+    map_entities()
 
     def setup(self):
         self.session = mock()
