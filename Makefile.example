@@ -32,4 +32,4 @@ deps:
 clean:
 	find . -name *.pyc -exec rm {} \;
 
-.PHONY: server test database clean.PHONY: server test database clean
+.PHONY: server test database clean
